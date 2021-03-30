@@ -18,6 +18,7 @@ generator = build_generator.Generator()
 epochs = 10
 batch_size =300
 scale_factor =2
+total_images = 3000
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 cross_entropy = losses.BinaryCrossentropy(from_logits=True)
@@ -86,6 +87,6 @@ def train(real_images, input_images, epochs):
 
     print ('Time for epoch {} is {} sec'.format(epoch + 1, time.time()-start))
 
-data = Data(path, scale_factor, 300)
+data = Data(path, scale_factor, total_images)
 real_images, input_images = data.collect()
 train(real_images, input_images, epochs)
