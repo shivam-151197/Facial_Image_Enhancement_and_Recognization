@@ -1,6 +1,6 @@
 # Facial_Image_Enhancement_and_Recognization
 
 ## Requirements
-Tensorflow
-Numpy
-Matplotlib
+Tensorflow\n
+Numpy\n
+Matplotlib\n
