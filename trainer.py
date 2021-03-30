@@ -6,21 +6,21 @@ import os
 import tensorflow as tf
 from tensorflow.keras import layers, Input, losses
 import matplotlib.pyplot as plt
-path = 'img_align_celeba/'
+path = 'Input_Images/'
 build_discriminator = Discriminator()
 discriminator = build_discriminator.Discriminator()
 build_generator = Generator()
 generator = build_generator.Generator()
 
 ###
-#Change As per Your Computation Power
+#Change As per the Computation Power you Have and The Accuracy required
 ###
 epochs = 10
 batch_size =300
 scale_factor =2
 total_images = 3000
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+
 cross_entropy = losses.BinaryCrossentropy(from_logits=True)
 
 
